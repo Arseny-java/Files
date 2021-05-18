@@ -47,7 +47,9 @@ public class MainSave {
                 File file = new File(fullFilename);
                 file.delete();
             }
-        } else System.out.println("Удалять нечего");
+        } else {
+            System.out.println("РЈРґР°Р»СЏС‚СЊ РЅРµС‡РµРіРѕ");
+        }
 
     }
 
