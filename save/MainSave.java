@@ -48,9 +48,18 @@ public class MainSave {
                 file.delete();
             }
         } else {
-            System.out.println("Удалять нечего");
+            StringBuilder log = new StringBuilder();
+            File tempTxt = new File("D:\\JavaProjects\\FilesNetology\\src\\setup\\Games\\temp\\temp.txt");
+            log.append("Удалять нечего").append("\r\n");
+            try {
+                FileWriter toTemp = new FileWriter(tempTxt, false);
+                toTemp.write(String.valueOf(log));
+                toTemp.flush();
+                toTemp.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
-
     }
 
     private static class ExtensionFilter implements FilenameFilter {
