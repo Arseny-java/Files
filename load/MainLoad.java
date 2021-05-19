@@ -31,9 +31,7 @@ public class MainLoad {
     public static GameProgress openProgress(String game) throws IOException, ClassNotFoundException {
         FileInputStream fis = new FileInputStream(game);
         ObjectInputStream ois = new ObjectInputStream(fis);
-        GameProgress gameProgress = (GameProgress) ois.readObject();
-        System.out.println(gameProgress);
-        return gameProgress;
+        return (GameProgress) ois.readObject();
     }
 
 
@@ -42,7 +40,7 @@ public class MainLoad {
         String dirPath = "D:\\JavaProjects\\FilesNetology\\src\\setup\\Games\\savegames";
         openZip(path, dirPath);
         String game = "D:\\JavaProjects\\FilesNetology\\src\\setup\\Games\\savegames\\ex1.dat";
-        openProgress(game);
+        System.out.println(openProgress(game));
 
     }
 
