@@ -4,9 +4,10 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class Main {
+public class MainSetup {
+    public static StringBuilder log = new StringBuilder();
+
     public static void main(String[] args) {
-        StringBuilder log = new StringBuilder();
         File src = new File("D:\\JavaProjects\\FilesNetology\\src\\setup\\Games\\src");
         log.append(src.mkdir()).append("\r\n");
         File res = new File("D:\\JavaProjects\\FilesNetology\\src\\setup\\Games\\res");
@@ -20,7 +21,7 @@ public class Main {
         log.append(mainDir.mkdir()).append("\r\n");
         File test = new File("D:\\JavaProjects\\FilesNetology\\src\\setup\\Games\\src\\test");
         log.append(test.mkdir()).append("\r\n");
-        File mainJava = new File("D:\\JavaProjects\\FilesNetology\\src\\setup\\Games\\src\\main\\MainSave.java");
+        File mainJava = new File("D:\\JavaProjects\\FilesNetology\\src\\setup\\Games\\src\\main\\MainSetup.java");
         try {
             log.append(mainJava.createNewFile()).append("\r\n");
         } catch (IOException e) {

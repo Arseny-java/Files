@@ -1,5 +1,7 @@
 package save;
 
+import setup.MainSetup;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -48,12 +50,12 @@ public class MainSave {
                 file.delete();
             }
         } else {
-            StringBuilder log = new StringBuilder();
+            StringBuilder logForDel = MainSetup.log;
             File tempTxt = new File("D:\\JavaProjects\\FilesNetology\\src\\setup\\Games\\temp\\temp.txt");
-            log.append("Удалять нечего").append("\r\n");
+            MainSetup.log.append("Удалять нечего").append("\r\n");
             try {
                 FileWriter toTemp = new FileWriter(tempTxt, false);
-                toTemp.write(String.valueOf(log));
+                toTemp.write(String.valueOf(logForDel));
                 toTemp.flush();
                 toTemp.close();
             } catch (IOException e) {
